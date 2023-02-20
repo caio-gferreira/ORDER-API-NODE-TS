@@ -7,7 +7,7 @@
   "author": "caio-gferreira <caiogfferreira@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node --exec sucrase-node src/server.ts",
+    "start": "sucrase-node src/index.ts",
     "test": "jest",
     "test:controllers": "jest src/controllers/*.spec.ts",
     "test:router": "jest src/router/*.spec.ts",
