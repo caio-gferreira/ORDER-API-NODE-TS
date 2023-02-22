@@ -11,7 +11,7 @@ export default  class RouteLoader {
 
   public loadRoutes(): Router {
     this.apiRouters.map(route => {
-      const hasRouter = this.loadRoutersMehots(route);
+      const hasRouter = this.loadRoutersMethods(route);
 
       if (hasRouter) return hasRouter;
 
@@ -21,7 +21,7 @@ export default  class RouteLoader {
     return this.route;
   }
 
-  public loadRoutersMehots(route: any) {
+  public loadRoutersMethods(route: any) {
     const methods = {
       'GET': this.route.get(route.path, route.handler),
       'POST': this.route.post(route.path, route.handler),
