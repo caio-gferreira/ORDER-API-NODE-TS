@@ -20,7 +20,6 @@ export default class AppManager {
   }
 
   private routes(): void {
-    console.log('oiioio')
      this.express.use(this.routerLoader.loadRoutes());
   }
 }
