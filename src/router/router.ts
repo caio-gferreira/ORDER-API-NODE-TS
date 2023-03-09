@@ -22,12 +22,12 @@ export default  class RouteLoader {
   }
 
   public loadRoutersMethods(route: any) {
-    const methods = {
+    const methodsRoutes = {
       'GET': this.route.get(route.path, route.handler),
       'POST': this.route.post(route.path, route.handler),
       'DELETE': this.route.delete(route.path, route.handler),
     }
 
-    return methods[route.method];
+    return  methodsRoutes[route.method];
   }
 }
